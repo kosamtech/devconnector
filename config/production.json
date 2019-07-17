@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://sam:sam1234@devcluster-c7d57.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken",
+  "githubClientID": "0f12f6e5574250e49c1d",
+  "githubSecret": "31352b6f838bd7b054b4091741527124d9890466"
+}
