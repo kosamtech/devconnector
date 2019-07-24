@@ -1,19 +1,19 @@
-## Devconnector
+### Devconnector
 devconnector is a web app that lets you create a  developer profile/portfolio, share posts and get help from other developers.
 
-## Version 
-1.0.0
+### Version 
+0.0.1
 
-## Developer
+## Author
 kkthecompguy
 
-## Scripts
-## server 
+### Scripts
+#### server 
 runs the server on port 5000
-## client 
+#### client 
 runs the client on port 3000
-## dev
+#### dev
 concurrently run the server and client
 
-## License
-MIT
+### License
+This project is licensed under the MIT
