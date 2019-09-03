@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "Social network for developers",
   "main": "server.js",
+  "repository": {
+        "type": "git",
+        "url": "https://github.com/kkthecompguy/devconnector.git"
+    },
   "scripts": {
     "start": "node server",
     "server": "nodemon server",
@@ -24,6 +28,7 @@
     "express-validator": "^5.3.1",
     "gravatar": "^1.8.0",
     "jsonwebtoken": "^8.5.1",
+    "mem": "^4.0.0",
     "mongoose": "^5.6.0",
     "request": "^2.88.0"
   },
