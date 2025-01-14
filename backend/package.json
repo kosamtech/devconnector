@@ -1,0 +1,46 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "DevConnector Express API",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node ./dist/index.js",
+    "build": "tsc",
+    "dev": "ts-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kosamtech/devconnector.git"
+  },
+  "keywords": [
+    "Social",
+    "Developers",
+    "Connect"
+  ],
+  "author": "Kosam Omollo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kosamtech/devconnector/issues"
+  },
+  "homepage": "https://github.com/kosamtech/devconnector#readme",
+  "devDependencies": {
+    "@types/config": "^3.3.5",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.12",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1",
+    "gravatar": "^1.8.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "normalize-url": "^8.0.1"
+  }
+}
