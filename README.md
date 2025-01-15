@@ -1,6 +1,6 @@
 # Social Developers Connect
 
-This is a write of the social developers connect application that allows developers to create thier profile and showcase their core skills to their friends and potential employers
+This is the social developers connect application that allows developers to create thier profile and showcase their core skills to their friends and potential employers
 
 # Tech Stack
 
@@ -9,6 +9,11 @@ This is a write of the social developers connect application that allows develop
 - Redux (reduxtoolkit)
 - Express
 - MongoDB
+
+# Announcement
+
+- It is a major `rewrite` of the application from JS to TS
+- Fixing up dependencies upgrade suggested by `@dependantbot`
 
 # Overview
 
