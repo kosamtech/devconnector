@@ -42,109 +42,111 @@ export interface IProfile {
     social: ISocial;
 }
 
-const ProfileSchema = new mongoose.Schema<IProfile>({
-    user: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'users'
-    },
-    company: {
-        type: String
-    },
-    website: {
-        type: String
-    },
-    location: {
-        type: String
-    },
-    status: {
-        type: String,
-        required: true
-    },
-    skills: {
-        type: [String],
-        required: true
-    },
-    bio: {
-        type: String
-    },
-    githubusername: {
-        type: String
-    },
-    experience: [
-        {
-            title: {
+const ProfileSchema = new mongoose.Schema<IProfile>(
+    {
+        user: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "users",
+        },
+        company: {
+            type: String,
+        },
+        website: {
+            type: String,
+        },
+        location: {
+            type: String,
+        },
+        status: {
+            type: String,
+            required: true,
+        },
+        skills: {
+            type: [String],
+            required: true,
+        },
+        bio: {
+            type: String,
+        },
+        githubusername: {
+            type: String,
+        },
+        experience: [
+            {
+                title: {
+                    type: String,
+                    required: true,
+                },
+                company: {
+                    type: String,
+                    required: true,
+                },
+                location: {
+                    type: String,
+                },
+                from: {
+                    type: Date,
+                    required: true,
+                },
+                to: {
+                    type: String,
+                },
+                current: {
+                    type: Boolean,
+                    default: false,
+                },
+                description: {
+                    type: String,
+                },
+            },
+        ],
+        education: [
+            {
+                school: {
+                    type: String,
+                    required: true,
+                },
+                degree: {
+                    type: String,
+                    required: true,
+                },
+                fieldOfStudy: {
+                    type: String,
+                    required: true,
+                },
+                from: {
+                    type: Date,
+                    required: true,
+                },
+                to: {
+                    type: Date,
+                },
+                current: {
+                    type: Boolean,
+                    default: false,
+                },
+                description: {
+                    type: String,
+                    required: true,
+                },
+            },
+        ],
+        social: {
+            youtube: {
                 type: String,
-                required: true
             },
-            company: {
+            x: {
                 type: String,
-                required: true
             },
-            location: {
-                type: String
-            },
-            from: {
-                type: Date,
-                required: true
-            },
-            to: {
-                type: String
-            },
-            current: {
-                type: Boolean,
-                default: false
-            },
-            description: {
-                type: String
-            }
-        }
-    ],
-    education: [
-        {
-            school: {
+            facebook: {
                 type: String,
-                required: true
             },
-            degree: {
+            linkedin: {
                 type: String,
-                required: true
             },
-            fieldOfStudy: {
-                type: String,
-                required: true
-            },
-            from: {
-                type: Date,
-                required: true
-            },
-            to: {
-                type: Date
-            },
-            current: {
-                type: Boolean,
-                default: false
-            },
-            description: {
-                type: String,
-                required: true
-            }
-        }
+        },
+    },
+    { timestamps: true },
+);
 
-    ],
-    social: {
-        youtube: {
-            type: String
-        },
-        x: {
-            type: String
-        },
-        facebook: {
-            type: String
-        },
-        linkedin: {
-            type: String
-        }
-    }
-}, { timestamps: true });
-
-export default mongoose.model<IProfile>('Profile', ProfileSchema);
+export default mongoose.model<IProfile>("Profile", ProfileSchema);

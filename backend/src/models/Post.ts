@@ -18,54 +18,57 @@ export interface IPost {
     avatar?: string;
     text: string;
     likes: ILike[];
-    comments: IComment[]
+    comments: IComment[];
 }
 
-const PostSchema = new mongoose.Schema<IPost>({
-    user: {
-        type: mongoose.Schema.ObjectId,
-        ref: "users"
-    },
-    name: {
-        type: String
-    },
-    avatar: {
-        type: String
-    },
-    text: {
-        type: String,
-        required: true
-    },
-    likes: [
-        {
-            user: {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: "users"
-            }
-        }
-    ],
-    comments: [
-        {
-            user: {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: "users"
+const PostSchema = new mongoose.Schema<IPost>(
+    {
+        user: {
+            type: mongoose.Schema.ObjectId,
+            ref: "users",
+        },
+        name: {
+            type: String,
+        },
+        avatar: {
+            type: String,
+        },
+        text: {
+            type: String,
+            required: true,
+        },
+        likes: [
+            {
+                user: {
+                    type: mongoose.Schema.Types.ObjectId,
+                    ref: "users",
+                },
             },
-            name: {
-                type: String
+        ],
+        comments: [
+            {
+                user: {
+                    type: mongoose.Schema.Types.ObjectId,
+                    ref: "users",
+                },
+                name: {
+                    type: String,
+                },
+                avatar: {
+                    type: String,
+                },
+                text: {
+                    type: String,
+                    required: true,
+                },
+                date: {
+                    type: Date,
+                    default: Date.now,
+                },
             },
-            avatar: {
-                type: String
-            },
-            text: {
-                type: String,
-                required: true
-            },
-            date: {
-                type: Date,
-                default: Date.now
-            }
-        }
-    ]
-}, { timestamps: true });
+        ],
+    },
+    { timestamps: true },
+);
 
-export default mongoose.model<IPost>('Post', PostSchema);
+export default mongoose.model<IPost>("Post", PostSchema);

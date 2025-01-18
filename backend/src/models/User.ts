@@ -8,27 +8,30 @@ export interface IUser {
     active: boolean;
 }
 
-const UserSchema = new mongoose.Schema<IUser>({
-    name: {
-        type: String,
-        required: true
+const UserSchema = new mongoose.Schema<IUser>(
+    {
+        name: {
+            type: String,
+            required: true,
+        },
+        email: {
+            type: String,
+            required: true,
+            unique: true,
+        },
+        password: {
+            type: String,
+            required: true,
+        },
+        avatar: {
+            type: String,
+        },
+        active: {
+            type: Boolean,
+            default: true,
+        },
     },
-    email: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    password: {
-        type: String,
-        required: true
-    },
-    avatar: {
-        type: String
-    },
-    active: {
-        type: Boolean,
-        default: true
-    }
-}, { timestamps: true });
+    { timestamps: true },
+);
 
-export default mongoose.model<IUser>('User', UserSchema);
+export default mongoose.model<IUser>("User", UserSchema);

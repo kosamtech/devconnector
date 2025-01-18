@@ -7,7 +7,8 @@
     "test": "jest",
     "start": "node ./dist/index.js",
     "build": "tsc",
-    "dev": "ts-node"
+    "dev": "ts-node",
+    "format": "prettier --tab-width 4 --write src"
   },
   "repository": {
     "type": "git",
@@ -25,9 +26,13 @@
   },
   "homepage": "https://github.com/kosamtech/devconnector#readme",
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/config": "^3.3.5",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
+    "@types/gravatar": "^1.8.6",
+    "@types/jsonwebtoken": "^9.0.7",
+    "prettier": "^3.4.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
   },
